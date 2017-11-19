@@ -6,6 +6,10 @@
   <packaging>war</packaging>
   <name>advertisementapp</name>
   <description>An advertisement app where one can register and post &amp; see advertisements</description>
+  <properties>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
