@@ -3,7 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 		
@@ -15,5 +17,7 @@
 		<property name="prefix" value="WEB-INF/views/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/AdsApp"
+		expected-type="javax.sql.DataSource">
+	</jee:jndi-lookup>
 </beans>
