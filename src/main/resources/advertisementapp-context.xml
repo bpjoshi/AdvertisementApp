@@ -20,4 +20,7 @@
 	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/AdsApp"
 		expected-type="javax.sql.DataSource">
 	</jee:jndi-lookup>
+	<mvc:resources location="/WEB_INF/resources/"
+		mapping="/static/**">
+	</mvc:resources>
 </beans>
